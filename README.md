@@ -2,6 +2,13 @@
 
 Primemart is a React Native-based e-commerce application developed using Expo. This app serves as a grocery shopping platform, showcasing your ability to build UI components, work with APIs, manage state, and handle errors effectively.
 
+### Screenshots
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/58fab961-78d9-44f7-bba6-7d1cd981c3c1" alt="Screenshot 1" width="300"/>
+  <img src="https://github.com/user-attachments/assets/b0ff6467-4b2d-4801-9c7c-acf385377d0c" alt="Screenshot 2" width="300"/>
+  <img src="https://github.com/user-attachments/assets/79f4715f-df75-4750-924b-7d89c45cfc3d" alt="Screenshot 3" width="300"/>
+</div>
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
