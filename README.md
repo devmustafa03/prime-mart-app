@@ -1,78 +1,134 @@
-# CryptoNight - React Native Cryptocurrency Tracker
+# Primemart - Grocery E-Commerce App
 
-CryptoNight is a feature-rich React Native application for tracking cryptocurrencies, viewing market data, and staying updated with the latest crypto news.
+Primemart is a React Native-based e-commerce application developed using Expo. This app serves as a grocery shopping platform, showcasing your ability to build UI components, work with APIs, manage state, and handle errors effectively.
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Setup Instructions](#setup-instructions)
+- [Running the App](#running-the-app)
+- [APIs Used](#apis-used)
+- [Screens and UI Components](#screens-and-ui-components)
+- [State Management](#state-management)
+- [Error Handling](#error-handling)
+- [Dependencies](#dependencies)
+
+## Project Overview
+**Primemart** is an e-commerce mobile application designed to mimic a grocery shopping experience. It demonstrates various aspects of mobile app development, including API integration, user authentication, cart management, and user interface design.
+
+### Objective:
+- Develop a scalable React Native e-commerce app for grocery shopping.
+- Implement UI components inspired by a given design.
+- Handle state management with Redux/Context API and API error handling gracefully.
 
 ## Features
+1. **User Interface:**
+   - **Home Screen**: Logo, search bar, user location, promotional banners, and shop-by-category section.
+   - **Bottom Navigation**: Icons for Home, Categories, Cart, and Profile.
+2. **API Integration**:
+   - Mock API for fetching categories and products using [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
+   - API endpoints for user login and adding products to the cart.
+3. **State Management**:
+   - Manage user authentication and cart state using Redux or Context API.
+4. **Cart Page**: Display products added to the cart, including product details, images, and quantity.
+5. **Error Handling**: Gracefully manage network and API errors, such as invalid login or request failures.
 
-- **Real-time Cryptocurrency Data**: Track prices, market caps, and price changes for a wide range of cryptocurrencies.
-- **User Authentication**: Secure login and registration system using Supabase.
-- **Personalized Profiles**: Users can create and edit their profiles, including avatar uploads.
-- **Market Overview**: View top gainers, losers, and overall market trends.
-- **Cryptocurrency News**: Stay informed with the latest news in the crypto world.
-- **Search Functionality**: Easily find specific cryptocurrencies.
-- **Responsive UI**: Smooth animations and a user-friendly interface built with React Native and NativeWind.
-
-## Tech Stack
-
-- React Native
-- TypeScript
-- NativeWind (Tailwind CSS for React Native)
-- Supabase (Authentication and Database)
-- React Query
-- Formik & Yup (Form handling and validation)
-- React Navigation
-- Expo
-
-## Getting Started
+## Setup Instructions
 
 ### Prerequisites
-
-- Node.js (v14 or later)
-- npm or yarn
-- Expo CLI
+- **Node.js**: Ensure Node.js is installed on your machine.
+- **Expo CLI**: Install Expo CLI for easy project setup and management.
 
 ### Installation
 
 1. Clone the repository:
-   ```
-   git clone https://github.com/devmustafa03/cryptoknight-app.git
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd cryptoknight-app
+   ```bash
+   git clone https://github.com/your-username/primemart.git
+   cd primemart
    ```
 
-3. Install dependencies:
-   ```
+2. Install dependencies:
+   ```bash
    npm install
    ```
-   or
-   ```
-   yarn install
-   ```
 
-4. Set up environment variables:
-   Create a `.env` file in the root directory and add your Supabase and other API keys:
-   ```
-   SUPABASE_URL=your_supabase_url
-   SUPABASE_ANON_KEY=your_supabase_anon_key
-   CRYPTO_API_KEY=your_crypto_api_key
+3. Start the Expo server:
+   ```bash
+   npm run start
    ```
 
-5. Start the development server:
-   ```
-   npx expo start
-   ```
+## Running the App
 
-## Acknowledgments
+You can run the Primemart app on different platforms:
 
-- [React Native](https://reactnative.dev/)
-- [Supabase](https://supabase.io/)
-- [NativeWind](https://www.nativewind.dev/)
-- [React Query](https://react-query.tanstack.com/)
-- [Expo](https://expo.dev/)
+- **Android**:
+  ```bash
+  npm run android
+  ```
+  
+- **iOS**:
+  ```bash
+  npm run ios
+  ```
 
-## Contact
+- **Web**:
+  ```bash
+  npm run web
+  ```
 
-For any queries or support, please contact [mustafaazad533@gmail.com](mailto:mustafaazad533@gmail.com).
+## APIs Used
+
+The app uses mock data from JSONPlaceholder for API integration. Below are the key endpoints:
+
+1. **Fetch Categories**:
+   - Endpoint: `GET https://jsonplaceholder.typicode.com/posts`
+   - Maps first 8 posts as product categories.
+   
+2. **Fetch Products in a Category**:
+   - Endpoint: `GET https://jsonplaceholder.typicode.com/photos`
+   - Uses photo data as product details.
+
+3. **User Login**:
+   - Endpoint: `POST https://jsonplaceholder.typicode.com/users`
+   - Sends username and password as a payload for login simulation.
+
+4. **Add to Cart**:
+   - Endpoint: `POST https://jsonplaceholder.typicode.com/posts`
+   - Sends product details (name, price, quantity) as payload to simulate adding to the cart.
+
+## Screens and UI Components
+
+### Home Screen
+- **Header**: Includes a logo, search bar, and current location display.
+- **Promotional Banner**: Displays a banner with the latest offers.
+- **Categories Section**: Showcases grocery categories with circular icons.
+- **Bottom Navigation**: Navigation between Home, Categories, Cart, and Profile screens.
+
+### Cart Page
+- Displays the products added to the cart along with their images, quantity, and total cost.
+
+### Login Screen
+- Allows users to authenticate with a mock API.
+- Provides login error messages for invalid credentials.
+
+## State Management
+
+The app uses **Redux Toolkit** or **Context API** to manage:
+- User authentication (login/logout states).
+- Shopping cart (adding/removing items).
+
+## Error Handling
+
+- **Network Errors**: Displays a user-friendly message if a network error occurs.
+- **API Errors**: Properly handles 4xx and 5xx HTTP errors.
+- **Form Validation**: Provides feedback for invalid login attempts.
+
+## Dependencies
+
+Here is the list of key dependencies used in the project:
+
+- **React Native**: Framework for building mobile apps.
+- **Expo**: Platform for building universal React Native apps.
+- **Redux Toolkit**: State management for global app state.
+- **Axios**: HTTP client for API requests.
+- **JSONPlaceholder**: Mock API for testing.
